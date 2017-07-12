@@ -1,0 +1,19 @@
+.bx-viewport {
+  overflow: visible !important;
+}
+
+.lottery-offers, .lottery-winners {
+  background-color: purple;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.lottery-winners {
+  background: yellow;
+}
+
+.view-all {
+  border-bottom-right-radius: 0;
+}
+

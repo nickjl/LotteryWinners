@@ -1,0 +1,98 @@
+mixin bingoSite (title, classes, img, padding, link)
+    li
+        a.d-flex.flex-row.p-1.align-items-center(href= "https://preview.insidecasino.com" + link, class= padding)
+            img.mr-3(src= img, class= classes)
+            span.footer-title= title
+
+
+include logo-images
+
+footer
+    .footer-container.subscribe-box.p-4
+        .d-flex.align-items-center.flex-column.flex-md-row.g1__s1.justify-content-around
+            .c2.d-flex.justify-content-center
+                h2 Get £1000 in bonus offers
+            .c1.d-flex.flex-column.align-items-center
+                input.subscribe-box__email(id="register", type="email", placeholder="Enter your email")
+                input#c4(type='checkbox', name='cc')
+                label.terms-conditions(for='c4')
+                    span
+                    | I have read the
+                    a.pl-1.font-italic(href="") Terms & Conditions
+                button.btn.btn-send(type="button") SUBMIT
+
+    .footer-sites
+        .d-flex.flex-column.flex-sm-row.flex-wrap.justify-content-around.g1__footer.container.color
+            .c1.p-3
+                h2 Casino Games
+                ul.d-flex.flex-column.list-unstyled
+                    +bingoSite("Starburst", "thumb-change", "", "py-2", "/slot/starburst")
+                    +bingoSite("Rainbow Riches", "thumb-change", "", "py-2", "/slot/")
+                    +bingoSite("Deal or no deal", "thumb-change", "", "py-2", "/slot/")
+                    +bingoSite("Cleopatra slots", "thumb-change", "", "py-2", "/slot/")
+                    +bingoSite("Golden Goddess", "thumb-change", "", "py-2", "/slot/")
+                    +bingoSite("Poker", "thumb-change", "", "py-2", "/slot/")
+                    +bingoSite("Blackjack", "thumb-change", "", "py-2", "/slot/")
+                    +bingoSite("Roulette", "thumb-change", "", "py-2", "/slot/")
+
+            .c1.p-3
+                h2 No Deposit Casinos
+                ul.d-flex.flex-column.list-unstyled
+                    +bingoSite("Wink Slots", "thumb-wink-slots", winkSlots, "", "/casino/")
+                    +bingoSite("Casumo", "thumb-casumo", casumo, "", "/casino/casumo-casino")
+                    +bingoSite("Mr Smith Casino", "thumb-mr-smith-casino", mrSmith, "", "/casino/")
+                    +bingoSite("Stan James Casino", "thumb-stan-james-casino", stanJames, "", "/casino/")
+                    +bingoSite("CasinoEuro", "thumb-casinoeuro", casinoEuro, "", "/casino/")
+
+            .c1.p-3
+                h2 New Casinos
+                ul.d-flex.flex-column.list-unstyled
+                    +bingoSite("Betfred", "thumb-betfred", betfred, "", "/casino/")
+                    +bingoSite("Leo Vegas Casino", "thumb-leo-vegas-casino", leoVegas, "", "/casino/")
+                    +bingoSite("Bet365 Casino", "thumb-bet365-casino", bet365, "", "/casino/")
+                    +bingoSite("32 Red Casino", "thumb-32-red-casino", red32, "", "/casino/32red-casino")
+                    +bingoSite("21 Casino", "thumb-21-casino", casino21, "", "/casino/")
+
+            .c1.p-3
+                h2 Editors Choice
+                ul.d-flex.flex-column.list-unstyled
+                    +bingoSite("Grosvenor Casinos", "thumb-grosvenor-casino", grosvenor, "", "/casino/grosvenor-casinos")
+                    +bingoSite("888 Casino", "thumb-888-casino", eight88, "", "/casino/")
+                    +bingoSite("Gala Casino", "thumb-gala-casino", gala, "", "/casino/")
+                    +bingoSite("Ladbrokes Casino", "thumb-ladbrokes-casino", ladbrokes, "", "/casino/")
+                    +bingoSite("Monopoly Casino", "thumb-monopoly-casino", monopoly, "", "/casino/")
+
+
+    .about-us-foot.py-4
+        .d-flex.flex-column.flex-lg-row.g1__s1.container
+            .c1.d-flex.flex-column
+                .d-flex.flex-row.my-4.my-lg-0
+                    a.ml-0(href="") About us
+                    a(href="") Advertise with us
+                    a(href="") Contact us
+
+            .c2.d-flex.justify-content-lg-end.flex-first.flex-lg-unordered
+                // TrustBox widget - Micro Review Count
+                .trustpilot-widget(data-locale='en-GB', data-template-id='5419b6a8b0d04a076446a9ad', data-businessunit-id='5912e2880000ff0005a22e3e', data-style-height='20px', data-style-width='100%', data-theme='light')
+                    a(href='https://uk.trustpilot.com/review/www.bestnewbingosites.co.uk', target='_blank') Trustpilot
+                // End TrustBox widget
+
+
+    .legal-logos.py-5
+        .d-flex.flex-column.flex-md-row.g1.g1__footer-logos.container
+            .c1.d-flex.align-items-center
+                p.mb-0 All offers advertised on Inside Casino are subject to the individual sites terms and conditions. Over 18's only, wagering requirement may apply.
+            .c2.d-flex.justify-content-lg-end
+                svg.mr-3.footer-logo(viewBox="0 0 205.9 70")
+                    use(xlink:href="#gambleware18plusst" x="0" y="0")
+                svg.footer-logo(viewBox="0 0 62.3 70")
+                    use(xlink:href="#game_care" x="0" y="0")
+        .container
+            hr.footer-underline
+        .container
+            .d-flex.flex-row.flex-wrap.justify-content-center
+                a(href="") Sitemap
+                a(href="") Terms & Conditions
+                a(href="") Privacy policy
+                a(href="") Responsive gambling
+            p.small.text-center Copyright Inside Casino 2017. All rights reserved.

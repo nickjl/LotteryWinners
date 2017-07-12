@@ -1,0 +1,93 @@
+.lw-card {
+  background: lightblue;
+  padding: 1rem 2rem 4rem 2rem;
+  border-top-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  position: relative;
+
+  .lottery-img {
+    background: white;
+    border-radius: 100%;
+    max-width: 90px;
+    max-height: 90px;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+
+.winner-summary {
+  padding: 15px;
+  p {
+    text-align: center;
+  }
+
+  span {
+    font-size: 2rem;
+    font-style: italic;
+  }
+}
+
+.winner-card {
+  background: lightblue;
+  padding: 0;
+  max-width: 250px;
+
+  .winner-img {
+    background: white;
+    //max-width: 200px;
+    border-top-left-radius: $border-radius;
+  }
+
+
+  h2 {
+    font-size: 1rem;
+  }
+
+}
+
+.lw-link {
+  background-color: blue;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  border-bottom-right-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+  padding: 10px 20px;
+  color: #ffffff;
+}
+
+
+.lw-link:hover {
+  text-decoration: none;
+  color: #ffffff;
+};
+
+
+
+.swivel-img {
+  border-top-left-radius: $border-radius;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 50px;
+  z-index: 2;
+  transform: rotate(0deg);
+  transition: 400ms ease all;
+
+}
+
+
+.lw-card:hover {
+  .swivel-img {
+    border-top-left-radius: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transform-origin: 100% 50%;
+    transition: 400ms ease all;
+  }
+}

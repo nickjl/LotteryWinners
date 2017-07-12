@@ -1,0 +1,191 @@
+$grey: #B7B7B7;
+$footer-color: #3D6DA7;
+
+
+footer {
+  font-family: sans-serif;
+  h2, input, button {
+    font-family: sans-serif;
+  }
+}
+
+
+.title-underline {
+  border-top: 8px solid yellow; // TODO;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+input[type="checkbox"] {
+  display:none;
+}
+
+input[type="checkbox"] + label span {
+  display:inline-block;
+  width:19px;
+  height:19px;
+  margin:-2px 10px 0 0;
+  vertical-align:middle;
+  background: transparent;
+  border: 2px solid #ffffff;
+  cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+  background: #ffffff;
+}
+
+
+.subscribe-box {
+  margin-top: 4rem;
+  background: #88C8B9;
+  border-top: 8px solid $footer-color;
+  position: relative;
+  color: #ffffff;
+
+  h2 {
+    color: #ffffff;
+    margin-top: .5rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &__email {
+    margin: 7px auto;
+    padding: 5px;
+    width: 280px;
+  }
+
+  input:focus {
+    outline: 1px solid $footer-color;
+  }
+
+  label {
+    margin: 7px auto;
+    input {
+      margin-right: 5px;
+    }
+  }
+
+  .terms-conditions {
+    font-size: 0.8rem;
+
+    a {
+      color: $footer-color;
+      text-decoration: underline;
+    }
+  }
+
+  .btn-send {
+    color: #ffffff;
+    background: #E55B41; //TODO
+    border-bottom-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+    margin-bottom: -42px;
+    padding: 8px 30px;
+  }
+}
+
+$games-list: grosvenor-casino #03262c, 888-casino #1a1a1a, gala-casino #1a1a1a, ladbrokes-casino #e41c1c, monopoly-casino #102252, sky-casino #0d0d0d, pink-casino #e5e5e5, bgo-casino #0f0f0f, foxy-casino #e5e5e5, coral-casino #004696, william-hill-casino #236d9b, paddy-power-power-casino #005440, 777-casino #f7a943, betfair-casino #f8b334, virgin-casino #cb0000, betfred #001b38, leo-vegas-casino #ea7446, bet365-casino #057b5b, 32-red-casino #fe1419, 21-casino #232324, maria-casino #363647, hello-casino #393939, wink-slots #1e1e45, casumo #37bfb9, mr-smith-casino #a5a59d, stan-james-casino #78b41e, casinoeuro #1f294a, spinit-casino #ba271f, mfortune-casino #313131, energy-casino #222222, spin-genie-casino #f2f2f2, betway-casino #231f20, viking-slots #2d3548, comeon-casino #151917, slots-magic #1c021b, casino-land #041a25, mansion-casino #0d0d0d, party-casino #211551;
+
+@each $game in $games-list {
+  .thumb-#{nth($game,1)} {
+    background: #{nth($game, 2)};
+  }
+}
+
+
+.footer-sites {
+  padding-top: 6rem;
+  margin-top: -4rem;
+  padding-bottom: 4rem;
+  background: $footer-color;
+  color: $grey;
+
+  h2 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    text-align: left;
+    font-family: sans-serif;
+
+  }
+
+  a, a:hover, a span:hover {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #ffffff; // TODO
+  }
+
+  img {
+    max-height: 60px;
+    max-width:  60px;
+    border-radius: 100%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition:         transform .8s ease-in-out;
+  }
+
+  img:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  li {
+    background: none;
+    padding-left: 0;
+  }
+}
+
+
+
+.about-us-foot {
+  color: $footer-color;
+  background: lighten($footer-color, 50%);
+
+  a, a:hover {
+    color: lighten($footer-color,20%);
+    text-decoration: none;
+    margin: 20px;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+
+.legal-logos {
+  color: $footer-color;
+
+  a {
+    margin: 12px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: lighten($footer-color,20%);
+  }
+}
+
+.footer-underline {
+  border-top: 6px solid $footer-color;
+}
+
+.footer-logo {
+  height: 80px;
+}
+
+
+@include media-breakpoint-up(lg) {
+  .footer-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subscribe-box {
+    &__email, label {
+      width: 90%;
+    }
+
+  }
+}
+
+
+
+
