@@ -2,18 +2,143 @@
   overflow: visible !important;
 }
 
-.lottery-offers, .lottery-winners {
-  background-color: purple;
-  padding: 4rem 2rem;
+.lottery-offers, .lottery-winners, .lottery-upcoming {
+  padding: 4rem 1rem;
   position: relative;
   overflow: hidden;
+
+
+  h2 {
+    font-family: $specialFont;
+    margin-bottom: 2rem;
+  }
 }
 
 .lottery-winners {
-  background: yellow;
+  background: $greenLight; //TODO
+
+  h2 {
+    color: $greenPrimary;
+  }
+
+  .view-all {
+    background: $greenPrimary;
+  }
+}
+
+.lottery-upcoming {
+  background-color: $yellowLight; //TODO
+
+  h2 {
+    color: $yellowDark;
+  }
+
+  .view-all {
+    background: $yellowPrimary;
+    color: $orangePrimary;
+  }
+
 }
 
 .view-all {
   border-bottom-right-radius: 0;
+  font-weight: 500;
+}
+
+
+.lottery-results {
+  background: $blueLight; //TODO
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  h2 {
+    background: $bluePrimary; //TODO
+    padding: 1.5rem 15px;
+    color: #ffffff;
+    margin-bottom: 0;
+  }
+}
+
+
+.result-card {
+  position: relative;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid lightgrey;
+
+
+  .lottery-img {
+    width: 14%;
+    height: 14%;
+    min-width: 60px;
+    min-height: 60px;
+  }
+
+  h5 {
+    text-align: left;
+    margin: 0.5rem;
+    color: $fontDark;
+  }
+
+  span {
+    color: $font;
+  }
+
+  .view-all {
+    background: $bluePrimary;
+  }
+}
+
+
+.result-ball {
+  margin-top: .5rem;
+
+
+  li {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: $bluePrimary; //TODO
+  padding: 5px;
+  margin: 3px;
+  color: white;
+  }
+
+
+
+  .bonus-ball {
+    background: $yellowDark; //TODO
+  }
+
+}
+
+
+@include media-breakpoint-down(xs) {
+  .result-card__width {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-up(sm){
+  .result-card {
+    padding-bottom: .5rem;
+  }
+
+}
+
+
+@include media-breakpoint-between(md,lg) {
+  .hide-card {
+    display: none !important;
+  }
+}
+
+
+
+@include media-breakpoint-up(lg){
+  .lottery-results {
+    width: 90%;
+  }
 }
 

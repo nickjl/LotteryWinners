@@ -64,7 +64,10 @@ module.exports = function (grunt) {
             compile: {
                 options: {
                     client: false,
-                    pretty: true
+                    pretty: true,
+                    data: {
+                        data: grunt.file.readJSON('./source/data/data.json')
+                    }
                 },
                 files: [ {
                     cwd: 'source',

@@ -1,51 +1,44 @@
 extends views/layout
 
 
-mixin lottery-card()
-    .lw-card.d-flex.flex-column.align-items-center
-        img.img-fluid.lottery-img(src="assets/images/betFair.png")
-        h2 US Mega Millions
-        h2 $64M
-        p 2 days 16 hrs
-        a(href="").lw-link Buy Now
-        img.swivel-img(src="assets/images/roulette.svg")
-
-
-mixin lottery-winner()
-    .lw-card.d-flex.flex-column.align-items-center.winner-card
-        img.img-fluid.winner-img(src="assets/images/betFair.png")
-        .winner-summary
-            h2 Hardworking woman and mother of two bags £10,000
-            p won
-                span $64M
-        .d-flex.flex-row
-            img.img-fluid.lottery-img(src="assets/images/betFair.png")
-            .d-flex.flex-column
-                h2 title
-                p jackpot
-        .timer
-            h2 time
-        a(href="").lw-link Buy Now
-        img.swivel-img(src="assets/images/roulette.svg")
 
 
 block content
     section.lottery-offers
         .d-md-flex.flex-md-row.justify-content-md-around.offer-slider
-            +lottery-card
-            +lottery-card
-            +lottery-card
-            +lottery-card
-            +lottery-card
+            - var yellowCards = true;
+            include views/lottery-card/lottery-card
         a(href="").lw-link.view-all View All Offers
 
 
     section.lottery-winners
         h2.text-center WINNERS
-        .d-md-flex.flex-md-row.justify-content-md-around.winner-slider
-            +lottery-winner
-            +lottery-winner
-            +lottery-winner
-            +lottery-winner
-        a(href="").lw-link.view-all View All Offers
+        .d-md-flex.flex-md-row.justify-content-md-between.winner-slider
+            include views/lottery-winner/lottery-winner
+        a(href="").lw-link.view-all View All Winners
+
+
+
+    section.lottery-upcoming
+        h2.text-center Upcoming LOTTERY
+        .d-md-flex.flex-md-row.justify-content-md-around.upcoming-slider
+            - var upcoming = true;
+            include views/lottery-card/lottery-card
+        a(href="").lw-link.view-all View All Upcoming Lottery
+
+
+    section.g1.d-flex.flex-column.flex-lg-row
+        .c1.py-lg-4.d-flex.flex-column.align-items-center
+            .lottery-results
+                h2 Lottery results
+                include views/result-card/result-card
+            a(href="") View more
+
+
+
+        .c2.p-4.d-flex.justify-content-center
+            .lottery-generator
+                h2(id='clockdiv') Lucky number generator
+
+
 

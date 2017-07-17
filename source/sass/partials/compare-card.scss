@@ -1,0 +1,112 @@
+.lottery-comparison {
+  padding-left: 0;
+}
+
+.lw-compare {
+  border-left: 5px solid $yellowPrimary;
+  background: $yellowLight;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 5px;
+
+
+  p {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+
+
+  &__row {
+    flex: 1;
+
+    .compare-format, .compare-days, .compare-odds, .compare-lowest {
+      flex: 0.25;
+    }
+  }
+
+  .compare-jackpot {
+    p {
+      font-size: 1.4rem;
+      color: $orangePrimary;
+      font-weight: bold;
+    }
+  }
+
+  .view-all {
+    background: $orangePrimary;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-bottom-right-radius: 5px;
+  }
+
+
+}
+
+
+
+
+
+.compare-title, .compare-jackpot, .compare-draw {
+  flex: 0.25;
+}
+
+
+@include media-breakpoint-down(sm) {
+  .lw-compare {
+    font-size: 1rem;
+
+    .compare-format, .compare-days, .compare-odds, .compare-lowest {
+      width: 50%;
+      margin: .5rem auto;
+    }
+
+
+    .lottery-img {
+      border-radius: 0;
+    }
+
+    &__row {
+      flex: auto;
+
+      .compare-format, .compare-days, .compare-odds, .compare-lowest {
+        flex: auto;
+      }
+    }
+
+    .compare-draw {
+      margin-right: auto;
+    }
+
+    .compare-title {
+      width: 100%;
+
+      .compare-info {
+        //margin-right: auto;
+      }
+    }
+
+
+    .hiddenn {
+      display: none !important;
+    }
+
+  }
+}
+
+
+@include media-breakpoint-up(lg) {
+  .lw-compare {
+    font-size: 1rem;
+  }
+}
+

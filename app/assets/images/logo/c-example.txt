@@ -1,0 +1,25 @@
+ Volume in drive C is OS
+ Volume Serial Number is C2E8-6E1E
+
+ Directory of C:\Users\Razvan\Documents\lottery\xdAssets\assets-assets\logo
+
+13/07/2017  15:40    <DIR>          .
+13/07/2017  15:40    <DIR>          ..
+13/07/2017  15:40                 0 c-example.txt
+27/06/2017  12:04            32,790 euromillions.png
+27/06/2017  12:04            39,294 florida-lotto.png
+27/06/2017  12:04            28,844 health-lottery-uk.png
+27/06/2017  12:04             2,392 mega-sena.png
+27/06/2017  12:04            14,321 national-lottery-uk.png
+27/06/2017  12:03            19,805 oz-lotto.png
+27/06/2017  12:03            16,040 sivincetutto.png
+27/06/2017  12:03            15,425 superenalotto.png
+27/06/2017  12:04             7,415 superlotto-plus.png
+27/06/2017  12:03             5,113 superstar.png
+27/06/2017  12:03            21,155 us-mega-millions.png
+27/06/2017  12:03            24,665 us-powerball.png
+              13 File(s)        227,259 bytes
+
+     Total Files Listed:
+              13 File(s)        227,259 bytes
+               2 Dir(s)  187,383,271,424 bytes free

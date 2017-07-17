@@ -3599,11 +3599,30 @@ $(document).ready(function(){
             pager: false,
             auto: true,
             controls: false,
+            slideWidth: 250,
+            slideMargin: 30
+        });
+        $('.upcoming-slider').bxSlider({
+            pager: false,
+            auto: true,
+            controls: false,
             slideWidth: 200,
             slideMargin: 30
         });
 
     }
 });
+
+
+$('.viewMoreBonuses').click(function() {
+    //$(this).find('.hide-bonuses').toggleClass('hiddenn');
+    $(this).siblings().find('.compare-rating').toggleClass('hiddenn');
+    //$(this).text( $(this).text() == 'show less' ? "show more" : "show less");
+
+});
+
+
+
+
 
 

@@ -1,62 +1,116 @@
 .lw-card {
-  background: lightblue;
-  padding: 1rem 2rem 4rem 2rem;
+  background: $bluePrimary; //TODO
+  padding: 1rem .5rem 4rem .5rem;
   border-top-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
   position: relative;
+  margin: 0.5rem;
+  text-align: center;
+  max-width: 250px;
+  flex: 1;
 
-  .lottery-img {
-    background: white;
-    border-radius: 100%;
-    max-width: 90px;
-    max-height: 90px;
-  }
 
-  h2 {
+
+
+  h3 {
     font-size: 1rem;
+    color: #ffffff;
+    margin-top: .5rem;
   }
 }
 
+.lottery-img {
+  background: white; //TODO
+  border-radius: 100%;
+  max-width: 75px;
+  max-height: 75px;
+}
 
-.winner-summary {
-  padding: 15px;
-  p {
-    text-align: center;
-  }
 
+.lottery-summary {
   span {
     font-size: 2rem;
     font-style: italic;
+    font-weight: bold;
   }
 }
 
-.winner-card {
-  background: lightblue;
-  padding: 0;
-  max-width: 250px;
 
-  .winner-img {
-    background: white;
-    //max-width: 200px;
-    border-top-left-radius: $border-radius;
+
+
+.winner-card {
+  background: $greenPrimary; //TODO
+  padding: 0;
+  text-align: left;
+  max-width: 300px;
+  color: $fontDark;
+
+
+  .winner-summary {
+    background: #ffffff;
+    padding: 15px;
+    flex: 1.4;
+
+    p {
+      text-align: center;
+    }
+
+    span {
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    h3 {
+      color: #000000;
+    }
   }
 
 
-  h2 {
+  .winner-img {
+    background: white; //TODO
+    border-top-left-radius: $border-radius;
+    width: 100%;
+  }
+
+
+  h3 {
     font-size: 1rem;
   }
 
+
+  .lw-link {
+    background: $orangePrimary;
+  }
+
+}
+
+
+
+.lw-card-yellow {
+  background: $yellowPrimary; //TODO
+
+
+
+  h3 {
+    color: $orangePrimary;
+  }
+
+
+  .lw-link {
+    background: $orangePrimary;
+  }
 }
 
 .lw-link {
-  background-color: blue;
+  background-color: $blueDark; //TODO
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 5;
   border-bottom-right-radius: $border-radius;
   border-top-left-radius: $border-radius;
-  padding: 10px 20px;
+  padding: 10px 15px;
   color: #ffffff;
 }
 
@@ -66,6 +120,10 @@
   color: #ffffff;
 };
 
+
+.testing {
+  flex: 1;
+}
 
 
 .swivel-img {
@@ -81,13 +139,11 @@
 
 }
 
-
 .lw-card:hover {
   .swivel-img {
     border-top-left-radius: 0;
-    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
-    transform-origin: 100% 50%;
-    transition: 400ms ease all;
+    transform-origin: 75% 0;
+    transition: 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
   }
 }

@@ -37,7 +37,7 @@ input[type="checkbox"]:checked + label span {
 
 
 .subscribe-box {
-  margin-top: 4rem;
+  //margin-top: 4rem;
   background: #88C8B9;
   border-top: 8px solid $footer-color;
   position: relative;
@@ -47,7 +47,7 @@ input[type="checkbox"]:checked + label span {
     color: #ffffff;
     margin-top: .5rem;
     font-size: 2rem;
-    font-weight: bold;
+    //font-weight: bold;
   }
 
   &__email {

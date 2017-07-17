@@ -1,0 +1,13 @@
+body {
+  font-family: $bodyFont;
+}
+
+
+a {
+  color: $bluePrimary;
+}
+
+a:hover {
+  color: $bluePrimary;
+  text-decoration: none;
+}

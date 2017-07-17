@@ -1,0 +1,28 @@
+- var maxCardNo = 4;
+
+- cardsNo = 0;
+- classes = '';
+each card in data
+    if cardsNo == 3
+        - classes = 'hide-card'
+
+    if cardsNo < maxCardNo
+        .lw-card.d-flex.flex-column.winner-card(class= classes)
+            img.winner-img(src="assets/images/winner/winner" + card.img + ".jpg")
+            .winner-summary.d-flex.flex-column.justify-content-between
+                h3= card.title + ' - ' + card.description
+                p.mb-0= 'won '
+                    span= card.win
+            .d-flex.flex-column.testing.justify-content-between
+                span
+                .d-flex.flex-row.justify-content-between.p-2.mr-auto.align-items-center
+                    img.lottery-img(src="assets/images/logo/" + card.lotterylogo + ".png")
+                    .p-2
+                        h3= card.lotteryname
+                        p= 'Jackpot '
+                            b= card.jackpot
+                .timer.mr-auto.p-2
+                    span 22:44:18
+            a(href="").lw-link Buy Now
+            img.swivel-img(src="assets/images/roulette.svg")
+    - cardsNo++

@@ -1,0 +1,20 @@
+extends views/layout
+
+
+block content
+
+
+    section.compare-heading
+        .d-flex.flex-row.justify-content-between.align-items-center
+            h1 Compare Lottery Tickets
+            .d-flex.flex-row
+                p sort by
+                p advertise first
+
+
+    section
+        ul.d-flex.flex-column.lottery-comparison
+
+            include views/compare-card/compare-card
+
+
