@@ -1,30 +1,37 @@
 - var maxCardNo = 10;
 
 - cardsNo = 0;
+- classes = '';
 each card in data
 
+    if cardsNo < 3
+        - classes = ' lw-compare-blue'
+    else
+        - classes = ''
+
     if cardsNo < maxCardNo
-        li.lw-compare.d-flex.flex-column.flex-md-row.justify-content-between.align-items-center.m-2
-            .compare-title.d-flex.flex-column
-                .compare-info.d-flex.flex-md-column.align-items-center.viewMoreBonuses
+        li.lw-compare.d-flex.flex-column.flex-md-row.justify-content-between.align-items-center.m-2(class= classes)
+            .compare-title.d-flex.flex-column.show-info
+                .compare-info.d-flex.flex-md-column.align-items-center
                     img.lottery-img(src="assets/images/logo/" + card.lotterylogo + ".png")
-                    h3= card.lotteryname
-                    .ml-auto test
-                .compare-rating.hiddenn
+                    h3.mt-md-2= card.lotteryname
+                    .ml-auto.hidden-md-up.imagee More
+                .compare-rating.hide-info
                     p Rating 5/5
-            .d-flex.flex-wrap.flex-md-nowrap.lw-compare__row.justify-content-around.align-items-center.hide-bonuses.hiddenn
-                .compare-format
-                    h5.hidden-md-up Format
-                    p 5/75 + 1/15
-                .compare-days
-                    h5.hidden-md-up Days
-                    p Tues, Fri
-                .compare-odds
-                    h5.hidden-md-up Odds
-                    p 1 in 258.89
-                .compare-lowest
-                    h5.hidden-md-up Lowest Price
-                    p= '$' + card.hrs
+            .hide-info.lw-compare__row
+                .d-flex.flex-wrap.flex-md-nowrap.justify-content-around.align-items-center
+                    .compare-format
+                        h5.hidden-md-up Format
+                        p 5/75 + 1/15
+                    .compare-days
+                        h5.hidden-md-up Days
+                        p Tues, Fri
+                    .compare-odds
+                        h5.hidden-md-up Odds
+                        p 1 in 258.89
+                    .compare-lowest
+                        h5.hidden-md-up Lowest Price
+                        p= '$' + card.hrs
             .compare-jackpot
                 h5.hidden-md-up Next Jackpot
                 p= card.jackpot

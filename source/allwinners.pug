@@ -1,0 +1,16 @@
+extends views/layout
+
+block content
+
+
+    section.compare-heading
+        .d-flex.flex-row.justify-content-between.align-items-center
+            h1 Lottery Winners
+
+    section.lottery-winners
+        .d-flex.flex-row.justify-content-around.flex-wrap
+            - var allwinners = true;
+            include views/lottery-winner/lottery-winner
+
+        include views/pagination/pagination
+

@@ -1,10 +1,6 @@
-.lottery-comparison {
-  padding-left: 0;
-}
-
 .lw-compare {
-  border-left: 5px solid $yellowPrimary;
-  background: $yellowLight;
+  border-left: 5px solid $bluePrimary;
+  background: #ffffff;
   padding: 1rem;
   position: relative;
   text-align: center;
@@ -37,13 +33,13 @@
   .compare-jackpot {
     p {
       font-size: 1.4rem;
-      color: $orangePrimary;
+      color: $blueDark;
       font-weight: bold;
     }
   }
 
   .view-all {
-    background: $orangePrimary;
+    background: $bluePrimary;
     padding-left: 25px;
     padding-right: 25px;
     border-bottom-right-radius: 5px;
@@ -51,9 +47,6 @@
 
 
 }
-
-
-
 
 
 .compare-title, .compare-jackpot, .compare-draw {
@@ -90,15 +83,16 @@
     .compare-title {
       width: 100%;
 
-      .compare-info {
-        //margin-right: auto;
+      h3 {
+        margin-left: .5rem;
       }
     }
 
 
-    .hiddenn {
-      display: none !important;
+    .hide-info {
+      display: none;
     }
+
 
   }
 }
@@ -108,5 +102,24 @@
   .lw-compare {
     font-size: 1rem;
   }
+}
+
+
+
+.lw-compare-blue {
+  border-left: 5px solid $yellowPrimary;
+  background: $yellowLight;
+
+  .compare-jackpot {
+    p {
+      color: $orangePrimary;
+    }
+  }
+
+  .view-all {
+    background: $orangePrimary;
+  }
+
+
 }
 

@@ -49,7 +49,7 @@
   .winner-summary {
     background: #ffffff;
     padding: 15px;
-    flex: 1.4;
+    flex: 1.5;
 
     p {
       text-align: center;
@@ -66,6 +66,14 @@
     }
   }
 
+  .flex-1 {
+    flex: 1;
+
+    h3 {
+      min-width: 120px;
+    }
+  }
+
 
   .winner-img {
     background: white; //TODO
@@ -75,7 +83,7 @@
 
 
   h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
 
@@ -119,11 +127,6 @@
   text-decoration: none;
   color: #ffffff;
 };
-
-
-.testing {
-  flex: 1;
-}
 
 
 .swivel-img {

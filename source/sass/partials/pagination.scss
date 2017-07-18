@@ -1,0 +1,33 @@
+.page-link {
+  border: none;
+  color: $bluePrimary;
+  margin-left: 0;
+  padding: .5rem;
+  background: transparent;
+}
+
+.page-link:hover, .page-link:focus {
+  background: $bluePrimary;
+  color: #ffffff;
+  border-bottom: 2px solid $bluePrimary;
+  outline: none;
+}
+
+.page-item.active .page-link {
+  color: $grey;
+  box-sizing: border-box;
+  border-bottom: 2px solid $grey;
+  background: transparent;
+}
+
+.page-item.disabled .page-link {
+  color: $grey;
+  background: transparent;
+}
+
+
+@include media-breakpoint-up(sm) {
+  .page-link {
+    padding: .5rem .75rem;
+  }
+}

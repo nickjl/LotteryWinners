@@ -73,10 +73,10 @@ $(document).ready(function(){
 });
 
 
-$('.viewMoreBonuses').click(function() {
-    //$(this).find('.hide-bonuses').toggleClass('hiddenn');
-    $(this).siblings().find('.compare-rating').toggleClass('hiddenn');
-    //$(this).text( $(this).text() == 'show less' ? "show more" : "show less");
+$('.show-info').click(function() {
+    $(this).next('.lw-compare__row').slideToggle();
+    $(this).find('.compare-rating').slideToggle();
+    $(this).find('.imagee').text($(this).find('.imagee').text() == 'More' ? 'Less' : 'More');
 
 });
 
