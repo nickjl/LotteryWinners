@@ -1,1 +1,187 @@
 extends views/layout
+
+
+block content
+
+    - lottopage = true
+
+    header.lotto-heading.pt-4
+        .wrapper
+            section.title
+                .d-flex.align-items-center.mx-4.title-content.pb-4
+                    img.lottery-img(src="assets/images/logo/euromillions.png")
+                    .more.p-3
+                        h1 Euromillions
+                        span flag
+            .play.d-flex.flex-column.flex-md-row-reverse
+                section.offers.d-flex.flex-column.justify-content-center
+                    p.text-center Available For International Players
+                    .d-flex.justify-content-center.pb-4
+                        include views/lottery-card/lottery-card
+                section.details
+                    dl.row.mx-2
+                        dt.col-4 Average ticket price:
+                        dd.col-8 £2.00/€2.00 per entry
+                        dt.col-4 Days of Draw:
+                        dd.col-8 Tues, Fri
+                        dt.col-4 Numbers to choose:
+                        dd.col-8 5/50 + 2 Lucky Star
+                        dt.col-4.hidden-sm-down= 'Winning number '
+                            span for 05/07/17
+                        dd.col-8.hidden-sm-down
+                            ul.d-flex.result-ball.list-unstyled.flex-wrap
+                                li 9
+                                li 17
+                                li 21
+                                li 29
+                                li 40
+                                li.bonus-ball 37
+                                li.bonus-ball 44
+
+        #T1.TickerNews
+            .leftside
+                h5 Winners
+            .ti_wrapper
+                .ti_slide
+                    .ti_content
+                        each card in data
+                            .ti_news
+                                span= card.title + ' : ' + card.win
+
+
+
+    section.lotto-content
+        .wrapper
+            .d-flex.flex-column.flex-md-row.g1-md__s1
+                    .c2.p-4.lotto-info
+                        .hidden-md-up
+                            .d-flex
+                                span Winning Number
+                                span.ml-auto.date 05/07/17
+                            ul.d-flex.result-ball.list-unstyled.justify-content-center.flex-wrap
+                                li 9
+                                li 17
+                                li 21
+                                li 29
+                                li 40
+                                li.bonus-ball 37
+                                li.bonus-ball 44
+                        p Last Updated on 2017-07-31 by admin
+
+                        h2 Mega Sena Review
+                        p.
+                            You don't get much more straight forward than you do with Brazil's Mega-Sena lottery. It's run by the Caixa Economica Federal Bank. Okay, I can imagine that with all the noise these days
+                            on the ups and downs with banks, this doesn't mean a guarantee but this looks like a well run lottery. It's been around since 1996 with Caixa operating lotteries since 1961, so it looks
+                            like they know what they are doing. But, let's take a closer look.
+
+                        h2 What is Mega Sena?
+                        p.
+                            You don't get much more straight forward than you do with Brazil's Mega-Sena lottery. It's run by the Caixa Economica Federal Bank. Okay, I can imagine that with all the noise these days
+                            on the ups and downs with banks, this doesn't mean a guarantee but this looks like a well run lottery. It's been around since 1996 with Caixa operating lotteries since 1961, so it looks
+                            like they know what they are doing. But, let's take a closer look.
+
+                        h2 Mega Sena Is a Little Different
+                        p.
+                            You don't get much more straight forward than you do with Brazil's Mega-Sena lottery. It's run by the Caixa Economica Federal Bank. Okay, I can imagine that with all the noise these days
+                            on the ups and downs with banks, this doesn't mean a guarantee but this looks like a well run lottery. It's been around since 1996 with Caixa operating lotteries since 1961, so it looks
+                            like they know what they are doing. But, let's take a closer look.
+
+                    .c1.p-4
+                        #accordion(role='tablist', aria-multiselectable='true')
+                            .card
+                                #headingOne.card-header(role='tab')
+                                    h5.mb-0
+                                        a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                                            | Funding Methods
+                                #collapseOne.collapse.show(role='tabpanel', aria-labelledby='headingOne')
+                                    .card-block
+                                        | February
+                            .card
+                                #headingTwo.card-header(role='tab')
+                                    h5.mb-0
+                                        a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                                            | Bonus Information
+                                #collapseTwo.collapse(role='tabpanel', aria-labelledby='headingTwo')
+                                    .card-block
+                                        | Here is the bonus information
+                            .card
+                                #headingThree.card-header(role='tab')
+                                    h5.mb-0
+                                        a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                                            | Languages
+                                #collapseThree.collapse(role='tabpanel', aria-labelledby='headingThree')
+                                    .card-block
+                                        | Here is the languages information
+                            .card
+                                #headingFour.card-header(role='tab')
+                                    h5.mb-0
+                                        a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+                                            | US Allowed
+                                #collapseFour.collapse(role='tabpanel', aria-labelledby='headingFour')
+                                    .card-block
+                                        | Here is the US allowed information
+
+
+
+                        ul#myTab.nav.nav-tabs(role='tablist').mt-4
+                            li.nav-item
+                                a.nav-link.active(data-toggle='tab', href='#bet', role='tab', aria-controls='bet') Bet
+                            li.nav-item
+                                a.nav-link(data-toggle='tab', href='#syndicate', role='tab', aria-controls='syndicate') Syndicate
+                            //-li.nav-item
+                                a.nav-link(data-toggle='tab', href='#messages', role='tab', aria-controls='messages') Messages
+                            //-li.nav-item
+                                a.nav-link(data-toggle='tab', href='#settings', role='tab', aria-controls='settings') Settings
+                        .tab-content
+                            #bet.tab-pane.active(role='tabpanel')
+                                include views/result-card/result-card
+                            #syndicate.tab-pane(role='tabpanel') 2
+                            //-#messages.tab-pane(role='tabpanel') 3
+                            //-#settings.tab-pane(role='tabpanel') 4
+
+
+    section.pros-cons.p-4
+        .wrapper
+            .d-flex.flex-column.flex-md-row.g1-md
+                .c1.pros.p-4
+                    h4 PROS:
+                    ul.list-unstyled
+                        li Official Lottery
+                        li Bi-Weekly
+                        li Good Growing Jackpots
+
+                .c2.cons.p-4
+                    h4 CONS:
+
+                    ul.list-unstyled
+                        li Sunshine
+                        li Beaches
+                        li Sunshine
+
+            .w-100.p-4
+                p Our team gives SuperLotto Plus a thumbs up and it looks like Wednesdays and Saturdays are going to get a whole lot more interesting.
+
+
+            h2 What is Mega Sena?
+            p.
+                You don't get much more straight forward than you do with Brazil's Mega-Sena lottery. It's run by the Caixa Economica Federal Bank. Okay, I can imagine that with all the noise these days
+                on the ups and downs with banks, this doesn't mean a guarantee but this looks like a well run lottery. It's been around since 1996 with Caixa operating lotteries since 1961, so it looks
+                like they know what they are doing. But, let's take a closer look.
+
+
+    section.lottery-upcoming
+        .wrapper
+            h2.text-center Upcoming LOTTERY
+            .d-md-flex.flex-md-row.justify-content-md-around.upcoming-slider
+                - upcoming = true;
+                - lottopage = false;
+                include views/lottery-card/lottery-card
+            a(href="").lw-link.view-all View All Upcoming Lottery
+
+
+
+
+
+
+
+

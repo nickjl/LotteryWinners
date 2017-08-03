@@ -35,13 +35,7 @@ module.exports = function (grunt) {
             dev: {
                 files: {
                     // destination				// source file
-                    'app/assets/css/app.min.css':			'source/sass/styles.scss',
-                    // other casnos
-                    //'app/css/amphome.css':			'source/sass/ampstyles.scss',
-                    //'app/css/ampcasino.css':			'source/sass/casinoampstyles.scss',
-                    //'app/css/ampgame.css':			'source/sass/gameampstyles.scss',
-                    //'app/assets/css/casinos/casino.min.css':	'source/sass/partials/casinos/casino.scss',
-                    //'app/assets/css/games/games.min.css':	'source/sass/partials/games/games.scss',
+                    'app/assets/css/app.min.css':			'source/sass/styles.scss'
 
                 },
                 options: {
@@ -83,7 +77,7 @@ module.exports = function (grunt) {
 
             js: {
                 // the files to concatenate
-                src: ['source/assets/js/jquery.bxslider.min.js', 'source/assets/js/tether.min.js', 'source/assets/js/bootstrap.js', 'source/assets/js/custom.js'],
+                src: ['source/assets/js/jquery.bxslider.min.js', 'source/assets/js/tether.min.js', 'source/assets/js/bootstrap.js','source/assets/js/stackblur.js', 'source/assets/js/jquery.tickerNews.js', 'source/assets/js/custom.js'],
                 // the location of the resulting JS file
                 dest: 'app/assets/js/lotterywinners.js',
                 options: {
@@ -94,8 +88,8 @@ module.exports = function (grunt) {
             },
 
             css: {
-                src: ['source/assets/css/jquery.bxslider.min.css', 'app/assets/css/app.min.css'],
-                dest: 'app/assets/css/lotterywinner.min.css'
+                src: ['app/assets/css/app.min.css'], // insert additional css here, in order
+                dest: 'app/assets/css/lotterywinners.min.css'
             }
 
         },

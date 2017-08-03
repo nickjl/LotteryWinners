@@ -16,7 +16,7 @@ mixin result-card()
 
         span.ml-sm-auto 05/07/17
         a(href="").lw-link.view-all Buy Now
-        img.swivel-img(src="assets/images/roulette.svg")
+        img.swivel-img(src="assets/images/hand.svg")
 
 
 - var maxCardNo = 5;
@@ -27,20 +27,25 @@ each card in data
     if cardsNo < maxCardNo
         .d-flex.flex-row.result-card.p-2.flex-wrap
             .d-flex.flex-row.align-items-center.result-card__width
-                img.lottery-img(src="assets/images/logo/" + card.lotterylogo + ".png")
+                div
+                    img.lottery-img(src="assets/images/logo/" + card.lotterylogo + ".png")
                 h5.hidden-sm-up= card.lotteryname
             .d-flex.flex-column.result-card__width
                 h5.hidden-xs-down= card.lotteryname
-                ul.d-flex.flex-row.result-ball.list-unstyled.justify-content-center
-                    li 9
-                    li 17
-                    li 21
-                    li 29
-                    li 40
-                    li.bonus-ball 37
-                    li.bonus-ball 44
+                if !lottopage
+                    ul.d-flex.flex-row.result-ball.list-unstyled.justify-content-center
+                        li 9
+                        li 17
+                        li 21
+                        li 29
+                        li 40
+                        li.bonus-ball 37
+                        li.bonus-ball 44
+                if lottopage
+                    p= 'Jackpot '
+                        span= card.jackpot
 
             span.ml-sm-auto 05/07/17
             a(href="").lw-link.view-all Buy Now
-            img.swivel-img(src="assets/images/roulette.svg")
+            //img.swivel-img(src="assets/images/hand.svg")
     - cardsNo++

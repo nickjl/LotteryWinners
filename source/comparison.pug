@@ -5,18 +5,37 @@ block content
 
 
     section.compare-heading
-        .d-flex.flex-row.justify-content-between.align-items-center
-            h1 Compare Lottery Tickets
-            .d-flex.flex-row
-                p sort by
-                p advertise first
+        .wrapper
+            .d-flex.flex-row.justify-content-between.align-items-center
+                h1 Compare Lottery Tickets
+                .d-flex.flex-row
+                    p sort by
+                    p advertise first
 
 
-    section.lottery-comparison
-        ul.d-flex.flex-column.pl-0
+    section.lottery-comparison.footer-placement
+        .wrapper
+            ul.d-flex.flex-column.pl-0
+                li.lw-compare.lw-compare__filter.d-flex.justify-content-between.align-items-center.m-2.hidden-sm-down
+                    .compare-title.d-flex.flex-column
+                        h5 Lottery
+                    .lw-compare__row
+                        .d-flex.flex-wrap.flex-md-nowrap.justify-content-around.align-items-center
+                            .compare-format
+                                h5 Format
+                            .compare-days
+                                h5 Days
+                            .compare-odds
+                                h5 Odds
+                            .compare-lowest
+                                h5 Lowest Price
+                    .compare-jackpot
+                        h5 Next Jackpot
+                    .compare-draw
+                        h5 Draw
 
-            include views/compare-card/compare-card
+                include views/compare-card/compare-card
 
-            include views/pagination/pagination
+                include views/pagination/pagination
 
 

@@ -2,7 +2,6 @@ body {
   font-family: $bodyFont;
 }
 
-
 a {
   color: $bluePrimary;
 }
@@ -10,4 +9,71 @@ a {
 a:hover {
   color: $bluePrimary;
   text-decoration: none;
+}
+
+
+
+.svg-hide {
+  display: none;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: auto;
+  display: block;
+}
+
+
+
+
+/* Accordion styling */
+.card {
+  border-radius: 0;
+}
+
+.card-header {
+  background: $blueLight;
+  border-bottom: 0;
+
+  a {
+    color: $fontDark;
+  }
+
+  a:focus {
+    text-decoration: none;
+  }
+}
+
+.card-block {
+  background: $blueLight;
+  color: $font;
+}
+
+
+
+
+/* Nav tabs styling */
+.nav-tabs {
+  .nav-item {
+    width: 50%;
+    text-align: center;
+  }
+
+  .nav-link {
+    border-radius: 0;
+    color: #ffffff;
+    background: $orangePrimary;
+    border: none;
+    border-bottom: 8px solid $yellowPrimary;
+  }
+
+  .nav-link:hover, .nav-link:focus {
+    border-bottom: 8px solid $yellowPrimary;
+  }
+
+  .nav-link.active {
+    color: $orangePrimary;
+    background: $yellowPrimary;
+    border-bottom: 8px solid $yellowPrimary;
+  }
 }

@@ -4,13 +4,19 @@ block content
 
 
     section.compare-heading
-        .d-flex.flex-row.justify-content-between.align-items-center
-            h1 Lottery Winners
+        .wrapper
+            //canvas#heroCanvas.lottery-offers__background(width='100', height='100', data-canvas='')
+            .d-flex.flex-row.justify-content-between.align-items-center
+                h1 Lottery Winners
 
-    section.lottery-winners
-        .d-flex.flex-row.justify-content-around.flex-wrap
-            - var allwinners = true;
-            include views/lottery-winner/lottery-winner
+            //img(data-canvas-image='', style='display: none', src="data:image/jpeg;base64,")
 
-        include views/pagination/pagination
+
+    section.lottery-winners.footer-placement
+        .wrapper
+            .d-flex.flex-row.justify-content-around.flex-wrap
+                - var allwinners = true;
+                include views/lottery-winner/lottery-winner
+
+            include views/pagination/pagination
 

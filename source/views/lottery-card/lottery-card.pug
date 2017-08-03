@@ -2,26 +2,41 @@
 
 - cardsNo = 0;
 - classes = '';
+
+
+if lottopage == true
+    - maxCardNo = 2;
+
+
 each card in data
     if yellowCards == true
         if cardsNo == 2 || cardsNo == 4
             - classes = 'lw-card-yellow'
         else
             - classes = ''
+
     if upcoming == true
         - classes = 'lw-card-yellow'
+
     if cardsNo == 4
         - classes += ' hide-card'
 
+    if lottopage == true && cardsNo == 1
+        - classes = 'lw-card-yellow'
+
+
     if cardsNo < maxCardNo
         .lw-card.d-flex.flex-column.align-items-center.justify-content-between(class= classes)
-            img.lottery-img(src="assets/images/logo/" + card.lotterylogo + ".png")
+            if !lottopage
+                img.lottery-img(src="assets/images/logo/" + card.lotterylogo + ".png")
             .p-2.lottery-summary
                 h3= card.lotteryname
                 span= card.jackpot
                 p 2 days 16 hrs
             a(href="").lw-link Buy Now
-            img.swivel-img(src="assets/images/roulette.svg")
+            //-img.swivel-img(src="assets/images/hand.svg")
+            svg.swivel-img(viewBox="0 0 64 110")
+                use(xlink:href="#hand" x="0" y="0")
     - cardsNo++
 
 

@@ -81,6 +81,11 @@
     width: 100%;
   }
 
+  .lottery-img {
+    max-width: 65px;
+    max-height: 65px;
+  }
+
 
   h3 {
     font-size: 0.9rem;
@@ -137,7 +142,7 @@
   width: 100px;
   height: 50px;
   z-index: 2;
-  transform: rotate(0deg);
+  transform: rotate(-90deg);
   transition: 400ms ease all;
 
 }
@@ -145,8 +150,16 @@
 .lw-card:hover {
   .swivel-img {
     border-top-left-radius: 0;
-    transform: rotate(90deg);
-    transform-origin: 75% 0;
+    transform: translate(-50%, -150%) rotate(0deg) scale(2) ;
+    transform-origin: 0 0;
     transition: 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .winner-card {
+    .winner-summary {
+      height: 260px;
+    }
   }
 }

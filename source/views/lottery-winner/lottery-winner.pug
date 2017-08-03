@@ -4,7 +4,7 @@
 - classes = '';
 
 if allwinners == true
-    - maxCardNo = 20;
+    - maxCardNo = 21;
 else
     - maxCardNo = 4
 
@@ -17,9 +17,14 @@ each card in data
         .lw-card.d-flex.flex-column.winner-card(class= classes)
             img.winner-img(src="assets/images/winner/winner" + card.img + ".jpg")
             .winner-summary.d-flex.flex-column.justify-content-between
-                h3= card.title + ' - ' + card.description
+                if allwinners
+                    h3= card.title
+                else
+                    h3= card.title + ' - ' + card.description
                 p.mb-0= 'won '
                     span= card.win
+                if allwinners
+                    h3.mb-auto= card.description
             .d-flex.flex-column.flex-1.justify-content-between
                 span
                 .d-flex.flex-row.justify-content-between.p-2.mr-auto.align-items-center.flex-1
@@ -31,5 +36,7 @@ each card in data
                 .timer.mr-auto.p-2
                     span 22:44:18
             a(href="").lw-link Buy Now
-            img.swivel-img(src="assets/images/roulette.svg")
+            //-img.swivel-img(src="assets/images/hand.svg")
+            svg.swivel-img(viewBox="0 0 64 110")
+                use(xlink:href="#hand" x="0" y="0")
     - cardsNo++

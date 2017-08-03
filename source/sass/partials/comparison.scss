@@ -2,9 +2,11 @@
   padding: 2rem;
   background: $bluePrimary; //TODO
   font-family: $specialFont;
+  position: relative;
 }
 
 
 .lottery-comparison {
+  padding-top: 4rem;
   background: $blueLight;
 }
